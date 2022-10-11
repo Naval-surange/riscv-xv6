@@ -116,5 +116,12 @@ struct proc
   struct file *ofile[NOFILE];  // Open files
   struct inode *cwd;           // Current directory
   char name[16];               // Process name (debugging)
-  uint ctime;                  // creation time of process
+
+  // modified code
+  uint ctime;        // creation time of process
+  uint64 run_time;   // Run-Time
+  uint64 start_time; // Start-Time
+  uint64 sleep_time; // Sleep-Time
+  uint64 n_runs;     // Number of times the process ran
+  uint64 priority;   // Priority of the Process;
 };
